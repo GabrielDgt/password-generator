@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <section class="container">
+        <h1>Password Generator</h1>
+        <section class="range">
+            <input type="range" name="rangeBar" id="rangeBar" min="1" max="20" value="8" 
+            oninput="this.nextElementSibling.value = this.value" />
+            <output>8</output>
+        </section>
+        <button id="genButton" class="genButton">
+            Generate Pass
+        </button>
+        <label class="checkContainer" for="checkBox">Include special characters
+            <input type="checkbox" name="checkBox" id="checkBox" class="checkbox" checked="checked">
+            <span class="checkmark"></span>
+        </label>
+        <section class="output">
+            <h3 id="passGenTxt">Click on Generate!</h3>
+            <button id="copyBtn" class="copy">Copy!</button>
+        </section>
+        <span id="copiedTxt"></span>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
